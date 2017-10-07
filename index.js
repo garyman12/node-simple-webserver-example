@@ -40,6 +40,7 @@ server.listen(port, localIP);
 
 var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
+console.log(groveSensor)
 
 // Create the temperature sensor object using AIO pin 0
 var temp = new groveSensor.GroveTemp(0);
