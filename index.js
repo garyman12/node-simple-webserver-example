@@ -43,7 +43,7 @@ var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
 var temp = new groveSensor.GroveTemp(29);
 console.log(temp.name());  
 function disp(){
-  console.log("The current temp is:" + temp.value())
+  console.log("The current temp isa:" + temp.value())
   console.log("Vibration is at:") // put in later
 }
 console.log('Server running at http://'+ localIP +':'+ port +'/');
