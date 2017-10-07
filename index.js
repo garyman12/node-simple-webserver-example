@@ -42,16 +42,15 @@ var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
 
 
-var button = new groveSensor.GroveButton(29); // set up digital input on pin #5
+var button = new mraa.Aio(0); // set up digital input on pin #5
 
-var buttonState = button.value();  // read the value of the digital pin
-console.log(buttonState);          // write the value to the console for debugging
+  // write the value to the console for debugging
 
 // Read the temperature ten times, printing both the Celsius and
 // equivalent Fahrenheit temperature, waiting one second between readings
 var i = 0;
 function disp(){
-  console.log("The current temp isa:");
+  console.log("The current temp is:");
   console.log("Vibration is at:" + buttonState); // put in later
 }
 console.log('Server running at http://'+ localIP +':'+ port +'/');
