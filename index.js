@@ -40,7 +40,7 @@ server.listen(port, localIP);
 
 var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
-var temp = new groveSensor.GroveTemp(29);
+var temp = new groveSensor.GroveTemp(0);
 console.log(temp.name());  
 function disp(){
   console.log("The current temp isa:" + temp.value())
