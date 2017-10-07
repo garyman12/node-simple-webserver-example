@@ -40,20 +40,12 @@ server.listen(port, localIP);
 
 var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
-var button_socket = "A0";
-var button = new groveSensor.GroveButton(4); // set up digital input on pin #5
-
-var buttonState = button.value();  // read the value of the digital pin
-console.log(buttonState);    // set the GPIO direction to input
-
-        // write the value to the console for debugging       
-
-/************************/
-/*  START THE SERVER    */
-/************************/
-
-// Create the HTTP server
-
-
-// print message to terminal that server is running
+var temp = new groveSensor.GroveTemp(29);
+console.log(temp.name());  
+function disp(){
+  console.log("The current temp is:" + temp.value())
+  console.log("Vibration is at:") // put in later
+}
 console.log('Server running at http://'+ localIP +':'+ port +'/');
+
+setTimeout(disp, 1000);  
