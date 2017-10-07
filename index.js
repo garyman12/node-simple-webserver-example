@@ -43,9 +43,7 @@ var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
 
 console.log(groveSensor);   // set the GPIO direction to input
 
-        // write the value to the console for debugging
-
-setInterval(checkState, 500);        
+        // write the value to the console for debugging       
 
 /************************/
 /*  START THE SERVER    */
