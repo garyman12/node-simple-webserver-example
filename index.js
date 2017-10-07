@@ -40,8 +40,8 @@ server.listen(port, localIP);
 
 var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
-var temp = new groveSensor.GroveTemp(0);
-console.log(temp.name());  
+var light = new groveSensor.GroveTemperature(0); 
+console.log(temp.name());
 function disp(){
   console.log("The current temp isa:" + temp.value())
   console.log("Vibration is at:") // put in later
