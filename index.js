@@ -35,17 +35,16 @@ function sayHello(req, res) {
 }
 var mraa = require('/usr/local/lib/node_modules/mraa');
 
-var button = new mraa.Gpio(29);     // set up digital read on digital pin #5
+var button = new mraa.Gpio(6);     // set up digital read on digital pin #5
 button.dir(mraa.DIR_IN);           // set the GPIO direction to input
 
-var buttonState = button.read();   // read the value of the digital pin
-console.log(buttonState);          // write the value to the console for debugging
+        // write the value to the console for debugging
 function checkState(){
   var buttonState = button.read();   // read the value of the digital pin
   console.log(buttonState);          // write the value to the console for debugging
 }
 
-setInterval(checkState, 500);        
+setInterval(checkState, 100);        
 
 /************************/
 /*  START THE SERVER    */
