@@ -1,3 +1,4 @@
+
 const PORT = 8080
 
 /* The use of `const` below is purely aesthetic, I use it to make my imports
@@ -8,6 +9,8 @@ const PORT = 8080
       // we use this to create our web server, we could swap this for `https`
       // and it would work the same
 const http  = require('http')
+const mraa  = require('/usr/local/lib/node_modules/mraa')
+
       // a single function from the global `child_process` module:
       // http://nodejs.org/docs/latest/api/child_process.html
     , exec  = require('child_process').exec
