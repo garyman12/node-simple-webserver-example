@@ -41,7 +41,10 @@ server.listen(port, localIP);
 var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
 
-console.log(groveSensor);   // set the GPIO direction to input
+var button = new groveSensor.GroveButton(A0); // set up digital input on pin #5
+
+var buttonState = button.value();  // read the value of the digital pin
+console.log(buttonState);    // set the GPIO direction to input
 
         // write the value to the console for debugging       
 
