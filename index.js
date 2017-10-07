@@ -56,4 +56,4 @@ function disp(){
 }
 console.log('Server running at http://'+ localIP +':'+ port +'/');
 
-setInterval(disp, 500);
+setInterval(disp, 50);
