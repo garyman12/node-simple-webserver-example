@@ -42,7 +42,7 @@ var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
 
 
-var button = new groveSensor.GroveButton(29); // set up digital input on pin #5
+var button = new groveSensor.GroveTemp(0); // set up digital input on pin #5
 
 var buttonState = button.value();  // read the value of the digital pin
 console.log(buttonState);          // write the value to the console for debugging
