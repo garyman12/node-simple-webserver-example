@@ -40,7 +40,7 @@ server.listen(port, localIP);
 
 var mraa = require('/usr/local/lib/node_modules/mraa');
 
-var button = new mraa.Gpio(6);     // set up digital read on digital pin #5
+var button = new mraa.Gpio(29);     // set up digital read on digital pin #5
 button.dir(mraa.DIR_IN);           // set the GPIO direction to input
 
         // write the value to the console for debugging
