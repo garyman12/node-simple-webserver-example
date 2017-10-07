@@ -52,7 +52,7 @@ console.log(buttonState);          // write the value to the console for debuggi
 var i = 0;
 function disp(){
   console.log("The current temp isa:");
-  console.log("Vibration is at:" + this.buttonState); // put in later
+  console.log("Vibration is at:" + buttonState); // put in later
 }
 console.log('Server running at http://'+ localIP +':'+ port +'/');
 
