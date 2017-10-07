@@ -33,6 +33,11 @@ function sayHello(req, res) {
     res.end();
     
 }
+var server = http.createServer(sayHello);
+
+// Turn server on - now listening for requests on localIP and port
+server.listen(port, localIP);
+
 var mraa = require('/usr/local/lib/node_modules/mraa');
 
 var button = new mraa.Gpio(6);     // set up digital read on digital pin #5
@@ -44,17 +49,14 @@ function checkState(){
   console.log(buttonState);          // write the value to the console for debugging
 }
 
-setInterval(checkState, 100);        
+setInterval(checkState, 500);        
 
 /************************/
 /*  START THE SERVER    */
 /************************/
 
 // Create the HTTP server
-var server = http.createServer(sayHello);
 
-// Turn server on - now listening for requests on localIP and port
-server.listen(port, localIP);
 
 // print message to terminal that server is running
 console.log('Server running at http://'+ localIP +':'+ port +'/');
