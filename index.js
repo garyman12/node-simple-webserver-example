@@ -64,5 +64,3 @@ function disp(){
   console.log("Vibration is at:" + buttonState); // put in later
 }
 console.log('Server running at http://'+ localIP +':'+ port +'/');
-
-setInterval(disp, 50);
