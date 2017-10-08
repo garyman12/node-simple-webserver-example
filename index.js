@@ -54,7 +54,7 @@ function checkState(){
   console.log(buttonState);          // write the value to the console for debugging
 }
 
-setInterval(checkState, 500);        // poll for changes in state ever 1/2 second    // write the value to the console for debugging // set up digital input on pin #5
+setInterval(checkState, 510);        // poll for changes in state ever 1/2 second    // write the value to the console for debugging // set up digital input on pin #5
 
   // write the value to the console for debugging
 
