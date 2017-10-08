@@ -42,8 +42,6 @@ var mraa = require('/usr/local/lib/node_modules/mraa');
 var groveSensor = require('/usr/local/lib/node_modules/jsupm_grove');
 
 
-var mraa = require('mraa');
-
 var button = new mraa.Gpio(29);     // set up digital read on digital pin #5
 button.dir(mraa.DIR_IN);           // set the GPIO direction to input
 
